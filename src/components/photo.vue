@@ -1144,12 +1144,11 @@ const fallbackDownload = (imageUrl) => {
 
 .showcase_grid {
   display: grid;
-  grid-template-columns: repeat(5, 0fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
 
 .showcase_item {
-  width: 290px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

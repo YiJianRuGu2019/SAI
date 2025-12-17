@@ -1,18 +1,20 @@
 <template>
   <div class="map_3d_container">
     <!-- 3D 中国地图 -->
-    <ChinaMap3D v-show="!show_tree_detail" @tree_click="handle_tree_click" />
-
     <!-- 树木 3D 详情视图 -->
-    <TreeDetail3D v-if="show_tree_detail" :tree_data="selected_tree" @back_click="handle_back_click" />
+    <!-- <ChinaMap3D v-show="!show_tree_detail" @tree_click="handle_tree_click" />
+    <TreeDetail3D v-if="show_tree_detail" :tree_data="selected_tree" @back_click="handle_back_click" /> -->
+    <ChinaMap3D_Tencent v-show="!show_tree_detail" @tree_click="handle_tree_click" />
+    <TreeDetail3D_Tencent v-if="show_tree_detail" :tree_data="selected_tree" @back_click="handle_back_click" />
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
-import ChinaMap3D from '@/components/ChinaMap3D.vue'
-import TreeDetail3D from '@/components/TreeDetail3D.vue'
-
+// import ChinaMap3D from '@/components/ChinaMap3D.vue'
+// import TreeDetail3D from '@/components/TreeDetail3D.vue'
+import ChinaMap3D_Tencent from '@/views/ChinaMap3D_Tencent.vue'
+import TreeDetail3D_Tencent from '@/views/TreeDetail3D_Tencent.vue'
 // 控制显示状态
 const show_tree_detail = ref(false)
 const selected_tree = ref(null)

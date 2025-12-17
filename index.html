@@ -6,12 +6,21 @@
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAI</title>
-  <!-- 可以添加其他所需的字体、图标或 CSS 文件 -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Source+Han+Serif+CN:wght@300;400;500;600&display=swap">
-  <!-- 百度地图 API (GL 版本 - 支持 3D) -->
-  <script type="text/javascript"
-    src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=TzxtcZqLgySFY2ekAQwll2ZAIV66X9nr"></script>
+
+  <!-- 使用本地字体作为备选方案，避免网络字体加载失败 -->
+  <style>
+    @font-face {
+      font-family: 'Source Han Serif CN';
+      src: local('Source Han Serif CN'),
+        local('Noto Serif CJK SC'),
+        local('SimSun'),
+        local('宋体');
+      font-weight: 300 600;
+      font-display: swap;
+    }
+  </style>
+
+  <!-- 腾讯地图 API 将在组件中动态加载 -->
 </head>
 
 <body>

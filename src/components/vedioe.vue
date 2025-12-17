@@ -1671,7 +1671,7 @@ onUnmounted(() => {
 
 .video_box {
   width: 100%;
-  height: 430px;
+  height: 530px;
   position: relative;
   overflow: hidden;
 }
